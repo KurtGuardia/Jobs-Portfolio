@@ -127,3 +127,135 @@ nav{
         transform: scale(3);
     }
 }
+
+/*------------------Individual Pages--------------------------*/
+
+.banner{
+    height: 50vh;
+    width: 100%;
+    position: relative;
+}
+
+.banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.author{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.author h1{
+    font-size: 42px;
+}
+
+.author h3{
+    padding: 10px 0px;
+    font-size: 32px;
+}
+
+.story,
+.my-work{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 80px 0px;
+}
+
+.story-description,
+.work-description{
+    width: 50%;
+}
+
+.story-description h3,
+.work-description h3{
+    font-size: 36px;
+    padding-bottom: 30px;
+}
+
+.story-description p,
+.work-description p{
+    padding: 20px 0px;
+    font-size: 20px;
+}
+
+.work-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
+
+.work-gallery img{
+    width: 100%;
+    height: 200px;
+}
+
+@media(max-width: 1024px){
+    
+    .page{
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: 2fr 1fr;
+        align-items: center;
+        max-height: 70vh; 
+    }
+    .hero{
+        grid-column: 2/3;
+        height: auto;
+    }
+    .hero img {
+        height: 350px;
+    }
+    .details{
+        grid-row: 2/3;
+        grid-column: 2/3;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .details h1{
+        font-size: 48px;
+    }
+    .details h2{
+        font-size: 38px;
+    }
+    .story,
+    .my-work{
+        flex-direction: column;
+        padding: 50px 0;
+    }
+    .story-description,
+    .work-description{
+        width: 100%;
+    }
+    .work-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .profile{
+        padding-top: 30px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 768px){
+
+    .hero{
+        height: auto;
+    }
+    .hero img{
+        height: 300px;
+    }
+    .details h1{
+        font-size: 38px;
+    }
+    .details h2{
+        font-size: 18px;
+    }
+}
